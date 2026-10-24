@@ -1,11 +1,11 @@
-def serialize(root):
-    res = []
-    def dfs(node):
-        if not node:
+def serialize(node):
+    res=[]
+    def dfs(root)
+        if not root:
             res.append('N')
             return
-        res.append(str(node.val))
-        dfs(node.left)
-        dfs(node.right)
-    dfs(root)
+        res.append(str(root.val))
+        dfs(root.left)
+        dfs(root.right)
+    dfs(node)
     return ','.join(res)
